@@ -1,0 +1,9 @@
+{
+	"name": "SamMobile",
+	"version": "0.0.1",
+	"dependencies": {
+      "bootstrap-sass-official": "3.3.3",
+      "bootstrap-material-design": "0.2.2",
+      "font-awesome":"4.3.0"
+	}
+}

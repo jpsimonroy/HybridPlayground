@@ -1,0 +1,8 @@
+-  request:
+      url: ^/ajira/team$
+      method: GET
+   response:
+      headers:
+         Content-Type: application/json
+      status: 200
+      file: response_data/team.json
