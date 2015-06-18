@@ -86,12 +86,6 @@ module.exports = function(grunt) {
       },
       localProps: {
         command: "sed -i index 's/API_CONTEXT_URI/http:\\/\\/192.168.1.108:5556/g' www/index.js"
-      },
-      stagingProps: {
-        command: "sed -i index 's/API_CONTEXT_URI/https:\\/\\/labtest.gofrugal.com/g' www/index.js"
-      },
-      prodProps: {
-        command: "sed -i index 's/API_CONTEXT_URI/https:\\/\\/sam.gofrugal.com/g' www/index.js"
       }
     },
 
