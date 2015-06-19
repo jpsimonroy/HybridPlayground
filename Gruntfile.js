@@ -85,7 +85,7 @@ module.exports = function(grunt) {
         command: './node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- -R spec'
       },
       localProps: {
-        command: "sed -i index 's/API_CONTEXT_URI/http:\\/\\/192.168.1.108:5556/g' www/index.js"
+        command: "sed -i index 's/API_CONTEXT_URI/http:\\/\\/192.168.10.19:5558/g' www/index.js"
       }
     },
 

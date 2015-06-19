@@ -3,12 +3,11 @@ var _ = require('underscore');
 
 var Header = React.createClass({
 	render: function() {
-		return <header>
+		return (<header>
 			<h1>Contacts Database</h1>
-		</header>;
+		</header>);
 	}
 });
-
 
 var Member = React.createClass({
 	render: function(){

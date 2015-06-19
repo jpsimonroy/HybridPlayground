@@ -6,6 +6,7 @@ node_modules/
 artifacts
 stub.log
 **/console.log
+**/.gradle
 coverage
 www/**
 platforms/android/assets/www/**

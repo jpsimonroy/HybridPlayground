@@ -9,16 +9,16 @@ stop(){
 
 start(){
 	echo "Starting stubs..."
-	./node_modules/.bin/stubby --admin 5557 --stubs 5556 --data stub/endpoints.yml  2&> stub.log &	
+	./node_modules/.bin/stubby --admin 5559 --stubs 5558 --data stub/endpoints.yml  2&> stub.log &	
 }
 
 restart(){
 	stop
 	start
 }
-case $flag in 
+case $flag in
 	start) start;;
 	stop) stop;;
-	restart) restart;; 
+	restart) restart;;
 	*) restart;;
 esac
