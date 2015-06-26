@@ -6,7 +6,7 @@ var Team = function() {
 	this.searchPath = '/ajira/team';
 	this.state = [];
 };
-Team.prototype.state = function(){
+Team.prototype.getState = function(){
 	return this.state;
 };
 Team.prototype.displayTeam = function() {
