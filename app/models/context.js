@@ -1,25 +1,28 @@
 var Team = require('./team');
 
 var Context = function(eventBus) {
-	models = {}
+	this.eventBus = eventBus;
+
+	this.models = {};
+	var that = this;
 	var emptyState = function(eventBus) {
 		return {
-			bus: eventBus,
-			team: models.team ? models.team.state() : []
+			bus: that.eventBus,
+			team: that.models.team ? that.models.team.state() : []
 		};
 	};
 
 	var state = function() {
 		return {
-			bus: eventBus,
-			team: models.team.state()
+			bus: that.eventBus,
+			team: that.models.team.state()
 		}
 	};
 
 	eventBus.on("init", function() {
-		models.team = new Team();
-		models.team.displayTeam().done(function(data) {
-			eventBus.trigger("init::complete", state());
+		that.models.team = new Team();
+		that.models.team.displayTeam().done(function(data) {
+			that.eventBus.trigger("init::complete", state());
 		});
 	});
 };

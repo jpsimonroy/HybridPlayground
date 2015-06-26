@@ -4,15 +4,16 @@ var Deferrable = require('../mixins/deferrable');
 
 var Team = function() {
 	this.searchPath = '/ajira/team';
-	state = [];
+	this.state = [];
 };
 Team.prototype.state = function(){
-	return state;
+	return this.state;
 };
 Team.prototype.displayTeam = function() {
 	var deferred = $.Deferred();
+	var that = this;
 	this.index().done(function(data) {
-		state = data;
+		that.state = data;
 		deferred.resolve(data);
 	}).fail(function(xhr, text, error) {
 		deferred.fail(text);
