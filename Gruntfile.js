@@ -111,9 +111,6 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('build_local', ['clean', 'bower', 'copy', 'sass', 'browserify', 'shell:localProps']);
-  grunt.registerTask('build_staging', ['clean', 'bower', 'copy', 'sass', 'browserify', 'shell:stagingProps', 'uglify:minify']);
-  grunt.registerTask('build_prod', ['clean', 'bower', 'copy', 'sass', 'browserify', 'shell:prodProps', 'uglify:minify']);
-
   grunt.registerTask('default', ['clean', 'bower', 'copy', 'sass', 'browserify', 'shell:localProps', 'connect', 'watch']);
 
 }
